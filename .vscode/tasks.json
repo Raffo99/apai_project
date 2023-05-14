@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build",
+			"type": "shell",
+			"command": "nvcc",
+			"args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/../output/${fileBasenameNoExtension}.out"
+            ],
+			"options": {
+                "cwd": "/usr/bin"
+            },
+            "group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
